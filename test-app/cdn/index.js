@@ -1,15 +1,21 @@
 function MyApp() {
-    const a = [{name: "one", id: 23}, {name: "two", id: 24}, {name: "three", id: 25}];
+    
     return (
-        a.map(e => <Button name={e.name} key={e.id} k={e.id}></Button>)
+        <Button name={"name"} key={1}></Button>
     );
 }
 
+
+
 function Button(props) {
+    let [name, nameState] = React.useState(1);
+
+    function setName() {
+        nameState((value) => value + 1);
+    }
+
     return (
-        <React.Fragment>
-            <button>{props.name} {props.k}</button>
-        </React.Fragment>
+        <button onClick={setName}>{name}</button>
     );
 }
 
