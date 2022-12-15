@@ -1,21 +1,19 @@
 function MyApp() {
     
     return (
-        <Button name={"name"} key={1}></Button>
+        <React.Fragment>
+            <Button />
+        </React.Fragment>
     );
 }
 
-
-
 function Button(props) {
-    let [name, nameState] = React.useState(1);
-
-    function setName() {
-        nameState((value) => value + 1);
+    const [value, setValue] = React.useState("off");
+    function toggleValue() {
+        setValue(v => v === "on" ? "off" : "on");
     }
-
     return (
-        <button onClick={setName}>{name}</button>
+        <button onClick={toggleValue}>{value}</button>
     );
 }
 
