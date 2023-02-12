@@ -11,7 +11,7 @@ function Button(props) {
     let [name, nameState] = React.useState(1);
 
     function setName() {
-        nameState((value) => value + 1);
+        nameState((value) => ++value);
     }
 
     return (
