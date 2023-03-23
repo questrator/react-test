@@ -1,24 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import Books from './Books';
 
-function App() {
+function App() {  
+  const books = [
+    {name: "onee", id: 12, price: 340},
+    {name: "two", id: 14, price: 140},
+    {name: "three", id: 16, price: 240},
+    {name: "four", id: 1123, price: 840},
+    {name: "five", id: 456, price: 450},
+    {name: "six", id: 3523, price: 257},
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Books books={books}/>
   );
 }
 
